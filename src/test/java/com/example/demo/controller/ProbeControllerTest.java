@@ -33,18 +33,6 @@ public class ProbeControllerTest {
                 .andExpect(jsonPath("$.direction").exists())
                 .andExpect(jsonPath("$.visited").isArray());
     }
-
-	/*
-	 * @Test void testEmptyCommand() throws Exception { Map<String, String> request
-	 * = Map.of("commands", "");
-	 * 
-	 * mockMvc.perform(post("/probe/command")
-	 * .contentType(MediaType.APPLICATION_JSON)
-	 * .content(objectMapper.writeValueAsString(request)))
-	 * .andExpect(status().isOk()) .andExpect(jsonPath("$.position").value("(0,0)"))
-	 * .andExpect(jsonPath("$.direction").value("NORTH"))
-	 * .andExpect(jsonPath("$.visited").isArray()); }
-	 */
     
     @Test
     void testEmptyCommand() throws Exception {
