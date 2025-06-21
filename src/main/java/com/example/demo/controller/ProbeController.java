@@ -21,15 +21,7 @@ public class ProbeController {
     private final Grid grid = new Grid(5, 5, List.of(new Position(1, 1)));
     private final Probe probe = new Probe(new Position(0, 0), Direction.NORTH, grid);
 
-	/*
-	 * @PostMapping("/command") public ResponseEntity<?> command(@RequestBody
-	 * Map<String, String> payload) { String commands = payload.get("commands");
-	 * probe.executeCommands(commands); return ResponseEntity.ok(Map.of( "position",
-	 * probe.getPosition(), "direction", probe.getDirection(), "visited",
-	 * probe.getVisited() )); }
-	 */
-    
-    @PostMapping("/command")
+   @PostMapping("/command")
     public ResponseEntity<?> command(@RequestBody Map<String, String> payload) {
         String commands = payload.get("commands");
 
